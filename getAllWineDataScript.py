@@ -9,7 +9,12 @@ Created on Wed Apr  3 13:26:55 2019
 # load product numbers from file
 import importProductNumbersFromFile
 import wineScrapingFunctions
+import requests
 
+from bs4 import BeautifulSoup
+
+#%% Get product numbers
+unique_product_numbers=importProductNumbersFromFile.getProductNumbers()
 # In[185]:
 
 #####################################################
@@ -49,7 +54,7 @@ for product_number in unique_product_numbers[0:10]:
     # some products cause errors
     # typically these are non-beverage products
     try:
-        product_df=product_data_wrapper(soup)
+        product_df=wineScrapingFunctions.product_data_wrapper(soup)
     except:
         error_producing.append(product_number)
         
@@ -60,7 +65,7 @@ for product_number in unique_product_numbers[0:10]:
     counter=counter+1
     if counter%100==0:
         print(str(counter)+", "+str(time.time()-start_t))
-    if counter%500==0:
+    if counter%2==0:
         save_to_csv(all_products,counter)
         try: # if for some reason all_products is missing
             del all_products
