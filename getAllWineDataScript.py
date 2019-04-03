@@ -60,7 +60,7 @@ for product_number in unique_product_numbers[0:10]:
     counter=counter+1
     if counter%100==0:
         print(str(counter)+", "+str(time.time()-start_t))
-    if counter%2==0:
+    if counter%500==0:
         save_to_csv(all_products,counter)
         try: # if for some reason all_products is missing
             del all_products
