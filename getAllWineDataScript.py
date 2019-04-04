@@ -35,11 +35,18 @@ try:
 except:
     pass
 
+
+#%%
+# Define log writing function
+import logging
+logging.basicConfig(filename="wine_logging.log", level=logging.DEBUG)
+
 start_t=time.time()
 counter=1
 error_producing=[]
 network_error=[]
-for product_number in unique_product_numbers[0:10]:
+logging.info("started")
+for product_number in unique_product_numbers:
     # generate www address
     link_start="https://www.alko.fi/en/tuotteet/" # + add product number
     
@@ -49,13 +56,15 @@ for product_number in unique_product_numbers[0:10]:
     except:
         network_error.append(product_number)
     soup = BeautifulSoup(page.content, 'html.parser')
-    soups.append(soup)
+    # the next line probably causes memory issues - too long of a string
+    # soups.append(soup)
     # translate soup object to a dataframe
     # some products cause errors
     # typically these are non-beverage products
     try:
         product_df=wineScrapingFunctions.product_data_wrapper(soup)
     except:
+        logging.warning("failed product number "+str(product_number))
         error_producing.append(product_number)
         
     if 'all_products' in locals():
@@ -65,15 +74,16 @@ for product_number in unique_product_numbers[0:10]:
     counter=counter+1
     if counter%100==0:
         print(str(counter)+", "+str(time.time()-start_t))
-    if counter%2==0:
+    if counter%500==0:
         save_to_csv(all_products,counter)
         try: # if for some reason all_products is missing
             del all_products
         except:
             pass
 end_t=time.time()
-print("time elapsed: "+str(end_t-start_t))
-print("time per page: "+str((end_t-start_t)/counter))
-print("expected duration: "+str(((end_t-start_t)/counter)*len(unique_product_numbers)/60)+" mins")
-all_products.head()
+logging.info("end")
+
+logging.info("time elapsed: " + str(end_t-start_t))
+logging.info("time per page: "+str((end_t-start_t)/counter))
+logging.info("expected duration: "+str(((end_t-start_t)/counter)*len(unique_product_numbers)/60)+" mins")
 
