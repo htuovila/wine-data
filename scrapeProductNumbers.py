@@ -33,7 +33,7 @@ def extractProductNumber(page):
 
 
 link1="https://www.alko.fi/tuotteet/tuotelistaus?SearchTerm=*&PageSize=12"
-link2="&SortingAttribute=&PageNumber="
+link2="&SortingAttribute=startOfSale-desc&PageNumber="
 link3="&SearchParameter=%26%40QueryTerm%3D*%26ContextCategoryUUID%"
 link4="3D6Q7AqG5uhTIAAAFVOmkI2BYA%26OnlineFlag%3D1"
 
@@ -44,7 +44,7 @@ pages=[]
 product_numbers=list()
 start_iteration=600
 # change 1 and 2 to bigger numbers once finished
-for i in range(50,100):
+for i in range(50,110):
     # parse full link string with page number in the middle
     link=link1+link2+str(i)+link3+link4
     page = requests.get(link)
@@ -74,7 +74,7 @@ if 1==0:
 
 now = datetime.datetime.now()
 now=str(now.strftime("%Y-%m-%d"))
-with open('wine-data/data-files/product_numbers_'+now+'.csv', 'w+') as writeFile:
+with open('data-files/product_numbers_'+now+'.csv', 'w+') as writeFile:
     writer = csv.writer(writeFile)
     writer.writerow(product_numbers)
 writeFile.close()
