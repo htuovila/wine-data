@@ -18,7 +18,7 @@ Project parts
 * most valuable 
 * what else? please let me know if you have any ideas
 
-4) [ ] Make a join to the famous kaggle wine data set (with reviews)
+4) [ ] Make a join to the famous Kaggle wine data set (with reviews)
 
 ## Scraper
 Makes requests to the www.alko.fi website (or more specifically
@@ -26,7 +26,7 @@ to the search page), and compiles a list of product numbers.
 
 Having obtained the product numbers, the scraper moves through
 individual product pages, which contain basic product information
-in different sections - these can be found using BeautifuSoup to parse
+in different sections - these can be found using BeautifulSoup to parse
 the html.
 
 Running the scraper on a raspberry pi takes approximately 5s per page, and
