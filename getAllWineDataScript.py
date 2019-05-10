@@ -72,7 +72,7 @@ for product_number in unique_product_numbers:
     else:
         all_products=product_df
     counter=counter+1
-    if counter%100==0:
+    if counter%100==0:        
         print(str(counter)+", "+str(time.time()-start_t))
     if counter%500==0:
         save_to_csv(all_products,counter)

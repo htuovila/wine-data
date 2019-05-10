@@ -17457,3 +17457,34 @@ INFO:root:end
 INFO:root:time elapsed: 42492.34606170654
 INFO:root:time per page: 4.983270325050609
 INFO:root:expected duration: 708.1227131896916 mins
+INFO:root:started
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/937487 HTTP/1.1" 200 128347
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/932274 HTTP/1.1" 200 120420
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/110887 HTTP/1.1" 200 114196
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/949487 HTTP/1.1" 200 113152
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/427847 HTTP/1.1" 200 132165
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/565437 HTTP/1.1" 200 132088
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/920417 HTTP/1.1" 200 130821
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/923954 HTTP/1.1" 200 130122
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/952397 HTTP/1.1" 200 126207
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/418457 HTTP/1.1" 200 140211
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/937228 HTTP/1.1" 200 113663
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/951587 HTTP/1.1" 200 131528
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/163817 HTTP/1.1" 200 113919
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
+DEBUG:requests.packages.urllib3.connectionpool:https://www.alko.fi:443 "GET /en/tuotteet/754034 HTTP/1.1" 200 113444
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.alko.fi
